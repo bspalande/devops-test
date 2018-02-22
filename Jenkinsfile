@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                archive '*.txt'
+                archive 'large_txtfiles/*.txt'
             }
         }
     }
