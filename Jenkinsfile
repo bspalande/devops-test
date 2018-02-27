@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		tar -czvf large_txtfiles.tar.gz /large_txtfiles/*.txt
 		
+		tar -zcvf archive-name.tar.gz large_txtfiles
             }
         }
     }
