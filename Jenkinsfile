@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		tar -czvf /home/user/devops-test/large_txtfiles.tar.gz /home/user/devops-test/large_txtfiles/'*.txt'
+		tar large_txtfiles.tar.gz large_txtfiles/*.txt
 		
             }
         }
