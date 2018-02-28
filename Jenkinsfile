@@ -9,7 +9,9 @@ pipeline {
             }
         }
 		stage ('Deploy') {
+			steps {
 					sh 'scp -r large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/'
 					}
+				}
     }
 }
