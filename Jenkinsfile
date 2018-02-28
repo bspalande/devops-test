@@ -6,6 +6,7 @@ pipeline {
 					sh '''
 					tar -czvf large_txtfiles.tar.gz large_txtfiles/*.txt
 					'''
+		    
             }
         }
 		stage ('Deploy') {
