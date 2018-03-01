@@ -9,7 +9,7 @@ pipeline {
 					echo "Archive file creation end..."
 					echo "moving file start..."
 					scp -r large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/
-					echo "moving file end..."
+					echo "moving file end....."
 					'''
 		    
             }
