@@ -4,21 +4,13 @@ pipeline {
         stage('Build') {
             steps {
 					sh '''
+					echo "Archive file creation start..."
 					tar -czvf large_txtfiles.tar.gz large_txtfiles/s1.txt
-					echo "This will run only if the run was marked as unstable"
+					echo "Archive file creation end..."
 					'''
 		    
             }
         }
-		stage ('Deploy') {
-			steps {
-					sh '''
-					
-					sh 'scp -r large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/'
-					'''
-					
-					
-					}
-				}
+		
     }
 }
