@@ -13,7 +13,7 @@ pipeline {
 			steps {
 					sh '''
 					
-					ssh user@bspalande-ae5be8805.mylabserver.com
+					sh 'scp -r user@large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/'
 					'''
 					
 					
