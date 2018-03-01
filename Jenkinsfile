@@ -10,8 +10,8 @@ pipeline {
 					echo "moving file start....."
 					scp -r large_txtfiles1.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/
 					echo "moving file end..."
-					ssh user@bspalande-ae5be8805.mylabserver.com
-					tar -xvf large_txtfiles1.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/
+					ssh user@bspalande-ae5be8805.mylabserver.com:/home/user/
+					
 					'''
 		    
             }
