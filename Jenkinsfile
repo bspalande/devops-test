@@ -4,7 +4,8 @@ pipeline {
         stage('Build') {
             steps {
 					sh '''
-					tar -czvf large_txtfiles.tar.gz large_txtfiles/*.txt
+					tar -czvf large_txtfiles.tar.gz large_txtfiles/s1.txt
+					echo "This will run only if the run was marked as unstable"
 					'''
 		    
             }
@@ -13,7 +14,7 @@ pipeline {
 			steps {
 					sh '''
 					
-					sh 'scp -r user@large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/'
+					sh 'scp -r large_txtfiles.tar.gz user@bspalande-ae5be8805.mylabserver.com:/home/user/'
 					'''
 					
 					
